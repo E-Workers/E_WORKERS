@@ -1,0 +1,117 @@
+
+@using E_WORKERS.Models
+
+
+@{
+
+    Layout = "~/Views/Shared/_layoutcustomer.cshtml";
+    //E_WORKERS.Models.Model1 db = new E_WORKERS.Models.Model1();   
+    Model1 db = new Model1();
+}
+
+<!-- Page Header Section breadcumb Start Here -->
+<div class="page-header-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <div class="header-page">
+                    <h2>Products</h2>
+                    <ul>
+                        <li> <a href="@Url.Action("Indexcustomer", "")">Home</a> </li>
+                        <li>Products</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header Section breadcumb End Here -->
+<!-- team area start here -->
+<div class="team-area">
+    <div class="container">
+        <div class="row">
+            <div class="team-list">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="sidebar-area">
+                        <div class="widget">
+                            <h2 class="widget-title">Search</h2>
+                            <div class="search-box">
+                                <div class="col-sm-12 col-xs-12 accured">
+                                    <form class="search-form">
+                                        <div class="form-group has-feedback">
+                                            <input type="text" class="form-control" name="search" placeholder="Search..">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget widget_categories">
+                            <h2 class="widget-title">Category</h2>
+                            <ul>
+                                <li><a href="@Url.Action("Products", "Home",new { id = "null" })" style="font-weight:bold">All Products <span class="count">(@db.Table_Products.Count())</span></a></li>
+
+                            </ul>
+                            @foreach (var categories_Product in db.Table_Categories_Product)
+                            {
+                                <ul>
+                                    <li><a href="@Url.Action("Products", "Home", new { id = categories_Product.Categories_Product_ID }) " style="font-weight:bold">@categories_Product.Categories_Product_Name  <span class="count">(@categories_Product.Table_Products.Count()</span></a></li>
+                                </ul>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                @foreach (var products in db.Table_Products)
+                {
+                    if (ViewData["cat_pro_id"] == null || products.Category_Product_FID == (int)ViewData["cat_pro_id"])
+                    {
+
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="single-member">
+                                <div class="member-img">
+                                    <a href="#"> <img style="width:100%; height:300px" src="@Url.Content(products.Products_Image)" alt="member"></a>
+                                    <div class="member-content">
+                                        <div class="member-info">
+                                            <div class="title">
+                                                <h3><a href="#">about Product</a><span>@products.Products_Name</span></h3>
+                                                <h4><span>Rs.</span>@products.Products_SalePrice</h4>
+                                                <p> @products.Products_Description</p>
+                                            </div>
+                                            <div class="member-social">
+                                                <ul>
+                                                    <li><a href="@Url.Action("Addtocart", "Cart", new {id=products.Products_ID})"><i class="fa fa-shopping-cart"></i></a></li>
+                                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="member-name">
+                                    <h4>@products.Products_Description </h4>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                 
+
+
+
+
+
+                }
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- team area start here -->
+

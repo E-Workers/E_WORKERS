@@ -1,0 +1,46 @@
+﻿@model IEnumerable<E_WORKERS.Models.Table_Service>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-primary glyphicon glyphicon-pencil" href="@Url.Action("Create","Table_Service")">Create New</a>
+   
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Service ID
+        </th>
+        <th>
+            Service Name
+        </th>
+        <th>
+            Service Charges
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var services in Model) {
+<tr>
+    <td>
+        @services.Service_ID
+    </td>
+    <td>
+        @services.Service_Name
+    </td>
+    <td>
+        @services.Service_Charges
+    </td>
+    <td>
+        <a class="btn btn-primary glyphicon glyphicon-edit" href="@Url.Action("Edit","Table_Service",new {id=services.Service_ID})">Edit</a> |
+        <a class="btn btn-success glyphicon glyphicon-book" href="@Url.Action("Details","Table_Service",new {id=services.Service_ID})">Detail</a> |
+        <a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete","Table_Service",new {id=services.Service_ID})">Delete</a> |
+    </td>
+</tr>
+}
+
+</table>

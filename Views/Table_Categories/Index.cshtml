@@ -1,0 +1,55 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+}
+
+
+
+@model IEnumerable<E_WORKERS.Models.Table_Categories>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-primary glyphicon glyphicon-pencil" href="@Url.Action("Create","Table_Categories")">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        
+        <th>
+            Categories_Name
+        </th> 
+        
+        <th>
+            Service_FID
+        </th>
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var categories in Model)
+    {
+        <tr>
+           
+
+            <td>
+                @categories.Categories_Name
+            </td >
+           
+
+            <td>
+                @categories.Table_Service.Service_Name
+            </td>
+            <td>
+                <a class="btn btn-primary glyphicon glyphicon-edit" href="@Url.Action("Edit","Table_Categories",new {id=categories.Categories_ID})">Edit</a> |
+                <a class="btn btn-success glyphicon glyphicon-book" href="@Url.Action("Details","Table_Categories",new {id=categories.Categories_ID})">Detail</a> |
+                <a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete","Table_Categories",new {id=categories.Categories_ID})">Delete</a> |
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<E_WORKERS.Models.Table_Worker_Linked_Services>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-primary glyphicon glyphicon-pencil" href="@Url.Action("Create","Table_Worker_Linked_Services")">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Worker Linked Service ID
+        </th>
+        <th>
+           Worker FID
+        </th> 
+        <th>
+           Service FID
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var linked in Model) {
+    <tr>
+        <td>
+           @linked.Worker_Linked_ServiceID
+        </td>
+        <td>
+          @linked.Worker_FID
+        </td>
+        <td>
+          @linked.Service_FID
+        </td>
+        <td>
+            <a class="btn btn-primary glyphicon glyphicon-edit" href="@Url.Action("Edit","Table_Worker_Linked_Services",new {id=linked.Worker_Linked_ServiceID})">Edit</a> |
+            <a class="btn btn-success glyphicon glyphicon-book" href="@Url.Action("Details","Table_Worker_Linked_Services",new {id=linked.Worker_Linked_ServiceID})">Detail</a> |
+            <a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete","Table_Worker_Linked_Services",new {id=linked.Worker_Linked_ServiceID})">Delete</a> |
+        </td>
+    </tr>
+}
+
+</table>

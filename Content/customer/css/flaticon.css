@@ -1,0 +1,54 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 12/11/2017 04:37
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.html");
+  src: url("../fonts/Flaticond41d.html?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon-2.html") format("woff"),
+       url("../fonts/Flaticon-3.html") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("Flaticon.html#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-picture:before { content: "\f100"; }
+.flaticon-smiling-emoticon-square-face:before { content: "\f101"; }
+.flaticon-travel:before { content: "\f102"; }
+.flaticon-trophy:before { content: "\f103"; }
+.flaticon-code:before { content: "\f104"; }
+.flaticon-desktop-monitor:before { content: "\f105"; }
+.flaticon-edit:before { content: "\f106"; }
+.flaticon-settings-gears:before { content: "\f107"; }
+.flaticon-settings:before { content: "\f108"; }
+.flaticon-light-bulb:before { content: "\f109"; }
+.flaticon-folder:before { content: "\f10a"; }
+.flaticon-database:before { content: "\f10b"; }
+.flaticon-windows:before { content: "\f10c"; }
+.flaticon-mark:before { content: "\f10d"; }
+.flaticon-multimedia:before { content: "\f10e"; }
+.flaticon-share-black-solid-social-symbol:before { content: "\f10f"; }
+.flaticon-movie-recorder:before { content: "\f110"; }
+.flaticon-heart:before { content: "\f111"; }
+.flaticon-like:before { content: "\f112"; }
+.flaticon-eye-open:before { content: "\f113"; }
+.flaticon-wordpress-logo:before { content: "\f114"; }
+.flaticon-responsive-design-symbol:before { content: "\f115"; }
+.flaticon-line-chart:before { content: "\f116"; }

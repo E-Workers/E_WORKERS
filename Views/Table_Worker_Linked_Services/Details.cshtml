@@ -1,0 +1,34 @@
+﻿@model E_WORKERS.Models.Table_Worker_Linked_Services
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Table_Worker_Linked_Services</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Table_Service.Services_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Table_Service.Services_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Table_Worker.Worker_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Table_Worker.Worker_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Worker_Linked_ServiceID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

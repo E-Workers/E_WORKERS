@@ -1,0 +1,78 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+}
+
+
+
+@model IEnumerable<E_WORKERS.Models.Table_Worker>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-primary glyphicon glyphicon-pencil" href="@Url.Action("Create","Table_Worker")">Create New</a>
+
+</p>
+<table class="table">
+    <tr>
+       
+        <th>
+            Worker Name
+        </th>
+        <th>
+            Worker Password
+        </th>
+        <th>
+            Worker Email
+        </th>
+        <th>
+            Worker Address
+        </th>
+        <th>
+            Worker Phone
+        </th>
+        <th>Worker Image</th> 
+        <th>Worker Status</th><th>City FID </th>
+    </tr>
+
+    @foreach (var workers in Model)
+    {
+        <tr>
+            
+            <td>
+                @workers.Worker_Name
+            </td>
+            <td>
+                @workers.Worker_Password
+            </td>
+            <td>
+                @workers.Worker_Email
+            </td>
+            <td>
+                @workers.Worker_Address
+            </td>
+            <td>
+                @workers.Worker_Phone
+            </td> 
+            <td>
+               <img src="@Url.Content(workers.Worker_Image)"  width="100" height="100" />
+            </td>
+            <td>
+                @workers.Worker_Status
+            </td><td>
+                @workers.Table_City.City_Name
+            </td>
+            <td>
+                <a class="btn btn-primary glyphicon glyphicon-edit" href="@Url.Action("Edit","Table_Worker",new {id=workers.Worker_ID})">Edit</a> |
+                <a class="btn btn-success glyphicon glyphicon-book" href="@Url.Action("Details","Table_Worker",new {id=workers.Worker_ID})">Detail</a> |
+                <a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete","Table_Worker",new {id=workers.Worker_ID})">Delete</a> |
+            </td>
+        </tr>
+    }
+
+</table>

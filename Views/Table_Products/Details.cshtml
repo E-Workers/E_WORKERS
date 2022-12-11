@@ -1,0 +1,67 @@
+﻿@model E_WORKERS.Models.Table_Products
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_layoutadmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Table_Products</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Table_Categories_Product.Categories_Product_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Table_Categories_Product.Categories_Product_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Products_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Products_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Products_Image)
+        </dt>
+
+        <dd>
+          <img src="@Url.Content(Model.Products_Image)"  width="100" height="100"/>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Products_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Products_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Products_SalePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Products_SalePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Products_PurchasePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Products_PurchasePrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Products_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

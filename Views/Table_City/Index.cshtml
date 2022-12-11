@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layoutadmin.cshtml";
+}
+
+
+@model IEnumerable<E_WORKERS.Models.Table_City>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-primary glyphicon glyphicon-pencil" href="@Url.Action("Create","Table_City")">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            City ID
+        </th>
+        <th>
+            City Name
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var city in Model)
+    {
+        <tr>
+            <td>
+                @city.City_ID
+            </td>
+            <td>
+                @city.City_Name
+            </td>
+            <td>
+
+                <a class="btn btn-primary glyphicon glyphicon-edit" href="@Url.Action("Edit","Table_City",new {id=city.City_ID })">Edit</a> |
+                <a class="btn btn-success glyphicon glyphicon-book" href="@Url.Action("Details","Table_City",new {id=city.City_ID })">Detail</a> |
+                <a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete","Table_City",new {id=city.City_ID })">Delete</a> |
+            </td>
+        </tr>
+    }
+
+</table>
