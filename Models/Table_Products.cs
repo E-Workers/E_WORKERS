@@ -11,6 +11,9 @@ namespace E_WORKERS.Models
         [Key]
         public int Products_ID { get; set; }
 
+        [NotMapped]
+        public int Quantity { get; set; }
+
         [Required]
         [StringLength(50)]
         public string Products_Name { get; set; }

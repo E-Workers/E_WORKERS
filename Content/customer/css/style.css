@@ -204,6 +204,7 @@ btn
   padding: 10px 30px;
   transition: all 0.5s ease 0s;
 }
+
 .btn:hover {
   background: #967d08;
   color: #ffffff;
@@ -4947,10 +4948,387 @@ section-heading
   margin-bottom: 25px;
 }
 /*---------------------------
-    
- 
+   
+/**********************************/
+/************ Cart CSS ************/
+/**********************************/
+.cart-page {
+    position: relative;
+    margin-top: 30px;
+}
+
+    .cart-page .cart-page-inner {
+        padding: 30px;
+        margin-bottom: 30px;
+        background: #ffffff;
+    }
+
+    .cart-page .table {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+        .cart-page .table .thead-dark th {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 18px;
+            font-weight: 700;
+            color: #e1c12e;
+            text-align: center;
+            background: #e1c12e;
+            border-color: #000000;
+            border-bottom: none;
+            vertical-align: middle;
+        }
+
+        .cart-page .table td {
+            font-size: 16px;
+            vertical-align: middle;
+        }
+
+        .cart-page .table .img {
+            display: flex;
+            align-items: center;
+        }
+
+            .cart-page .table .img img {
+                max-width: 60px;
+                max-height: 60px;
+                margin-right: 15px;
+            }
+
+            .cart-page .table .img p {
+                display: inline-block;
+                text-align: left;
+                margin: 0;
+            }
+
+        .cart-page .table .qty {
+            display: inline-block;
+            width: 100px;
+            font-size: 0;
+        }
+
+        .cart-page .table button {
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+            text-align: center;
+            color: #FFFFFF;
+            background: #FFFFFF;
+            border: none;
+            border-radius: 4px;
+        }
+
+            .cart-page .table button.btn-minus {
+                border-radius: 4px 0 0 4px;
+            }
+
+            .cart-page .table button.btn-plus {
+                border-radius: 0 4px 4px 0;
+            }
+
+            .cart-page .table button.btn-cart {
+                width: auto;
+            }
+
+        .cart-page .table input {
+            width: 40px;
+            height: 30px;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+            background: #000000;
+            border: none;
+        }
+
+
    
 
+    .cart-page .cart-summary {
+        position: relative;
+        width: 100%;
+    }
+
+        .cart-page .cart-summary .cart-content {
+            padding: 30px;
+            background: #f3f6ff;
+        }
+
+            .cart-page .cart-summary .cart-content h1 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .cart-page .cart-summary .cart-content p span,
+            .cart-page .cart-summary .cart-content h2 span {
+                float: right;
+            }
+
+            .cart-page .cart-summary .cart-content h2 {
+                font-size: 20px;
+                font-weight: 600;
+                padding-top: 12px;
+                border-top: 1px solid #dddddd;
+                margin: 0;
+            }
+
+        .cart-page .cart-summary .cart-btn button {
+            margin-top: 15px;
+            width: calc(50% - 15px);
+            height: 50px;
+            padding: 2px 10px;
+            text-align: center;
+            color: #e1c12e;
+            background: #e1c12e;
+            border: none;
+            border-radius: 4px;
+        }
+
+            .cart-page .cart-summary .cart-btn button:hover {
+                color: #e1c12e;
+                background: #e1c12e;
+            }
+
+            .cart-page .cart-summary .cart-btn button:first-child {
+                margin-right: 25px;
+                color: #e1c12e;
+                background: #e1c12e;
+                border: 1px solid #e1c12e;
+            }
+
+                .cart-page .cart-summary .cart-btn button:first-child:hover {
+                    color: #e1c12e;
+                    background: #e1c12e;
+                }
+.cart-box-main {
+    padding: 70px 0px;
+}
+
+.table-main table thead {
+    background: #d33b33;
+    color: #ffffff;
+}
+
+.table-main .table thead th {
+    font-size: 18px;
+}
+
+.table-main table td.thumbnail-img {
+    width: 120px;
+}
+
+.table-main table td {
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.quantity-box input {
+    width: 60px;
+    border: 2px solid #010101;
+    text-align: center;
+}
+
+    .quantity-box input:focus {
+        border-color: #d33b33;
+    }
+
+.name-pr a {
+    font-weight: 700;
+    font-size: 18px;
+    color: #010101;
+}
+
+.remove-pr {
+    text-align: center;
+}
+.update-box input[type="submit"] {
+   
+    background: #e1c12e;
+    border: medium none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 40px;
+    margin-right: 15px;
+    padding: 0 20px;
+    text-shadow: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    white-space: nowrap;
+    width: inherit;
+}
+
+    .update-box input[type="submit"]:hover {
+        background: #e1c12e;
+    }
+.order-box h3 {
+    font-size: 16px;
+    color: #222222;
+    font-weight: 700;
+}
+
+.order-box h4 {
+    font-size: 16px;
+    padding: 0px;
+    line-height: 35px !important;
+}
+
+.order-box .font-weight-bold {
+    font-size: 18px;
+}
+
+.gr-total h5 {
+    font-weight: 700;
+    color: #e1c12e;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 35px !important;
+}
+
+.gr-total .h5 {
+    margin: 0px;
+    font-weight: 700;
+    line-height: 35px;
+}
+.my-account-box-main {
+    padding: 70px 0px;
+}
+
+.shopping-box a {
+    font-size: 18px;
+    color: #e1c12e;
+    border: none;
+    padding: 10px 20px;
+}
+.payment-icon {
+    display: inline-block;
+    padding: 10px 0px;
+}
+
+    .payment-icon ul li {
+        width: 20%;
+        float: left;
+    }
+
+.needs-validation label {
+    font-size: 16px;
+    margin-bottom: 0px;
+    line-height: 24px;
+}
+
+.needs-validation .form-control {
+    min-height: 40px;
+    border-radius: 0px;
+    border: 1px solid #e8e8e8;
+    box-shadow: none !important;
+    font-size: 14px;
+}
+
+    .needs-validation .form-control:focus {
+        border: 1px solid #d33b33 !important;
+    }
+
+.review-form-box .form-control {
+    min-height: 40px;
+    border-radius: 0px;
+    border: 1px solid #e8e8e8;
+    box-shadow: none !important;
+    font-size: 14px;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #d33b33;
+    box-shadow: none;
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #d33b33;
+    box-shadow: none;
+}
+
+.new-account-login h5 {
+    font-size: 18px;
+    color: #1111111;
+    font-weight: 600;
+}
+
+    .new-account-login h5 a:hover {
+        color: #d33b33;
+    }
+
+.review-form-box button {
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+}
+
+.wide.w-100 {
+    min-height: 40px;
+    border: 1px solid #e8e8e8;
+}
+
+    .wide.w-100 option {
+        min-height: 40px;
+    }
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+}
+
+.odr-box a {
+    font-size: 18px;
+    color: #111111;
+    font-weight: 700;
+}
+
+.account-box {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #010101;
+}
+
+.bottom-box {
+    border-top: 1px solid #eee;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-top: 15px;
+}
+
+    .bottom-box .account-box {
+        min-height: 205px;
+    }
+
+.account-box {
+    border: 2px solid #010101;
+    margin-top: 15px;
+}
+
+.my-account-page a {
+    color: #010101;
+}
+
+    .my-account-page a:hover {
+        color: #d33b33;
+    }
+
+.service-icon i {
+    font-size: 34px;
+}
+
+.my-account-page a:hover i {
+}
 
 
 

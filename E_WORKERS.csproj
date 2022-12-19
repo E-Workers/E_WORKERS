@@ -378,8 +378,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Views\Cart\DisplayCart.cshtml" />
+    <Content Include="Views\Cart\Checkout.cshtml" />
     <None Include="Views\Home\Workers.cshtml" />
     <None Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\Home\HtmlPage1.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
