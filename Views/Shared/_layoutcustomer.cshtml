@@ -145,64 +145,76 @@
                 <div class="col-md-12">
                     <div class="mobile-menu">
                         <nav id="dropdown">
-                            <ul>
+                            <ul id="nav">
+                                <li>
+                                    <a href="@Url.Action("Indexcustomer","")">Home</a>
+
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("About","")">About</a>
+                                </li>
+
+                                <li>
                                 <li class="drop-menu">
-                                    <a href="index.html">Home <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <a href="@Url.Action("Workers", "")">Workers</a>
+
+
                                     <ul>
-                                        <li><a href="index.html">Home 1</a></li>
-                                        <li><a href="index2.html">Home 2</a></li>
+
+                                        <li>
+                                            <a href="@Url.Action("Index", "Products")">Tailor</a>
+
+                                        </li>
+                                        <li><a href="@Url.Action("Index", "Contact_Us")">Painter</a></li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Worker_Login")">Poet</a>
+
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Worker_Login")">Plumber</a>
+
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Worker_Login")">furniture Designer</a>
+
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Worker_Login")">Photographer</a>
+
+                                        </li>
                                     </ul>
                                 </li>
-                                <li class="drop-menu">
-                                    <a href="about.html">About <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    <ul>
-                                        <li><a href="about.html">About 1</a></li>
-                                        <li><a href="aboutme.html">About 2</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li class="drop-menu">
-                                    <a href="service.html">Services <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    <ul>
-                                        <li><a href="service.html">service 1</a></li>
-                                        <li><a href="single-service.html">setvice detials</a></li>
-                                    </ul>
+                                <li>
+                                    <a href="@Url.Action("Products", "")">Products</a>
+
                                 </li>
                                 <li class="drop-menu">
-                                    <a href="#">pages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <a href="#blog">More </a>
                                     <ul>
-                                        <li><a href="index.html">Home One</a></li>
-                                        <li><a href="index2.html">Home Two</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="aboutme.html">single about</a></li>
-                                        <li><a href="service.html">service</a></li>
-                                        <li><a href="single-service.html">Single Service</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="single-member.html">Single Team</a></li>
-                                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                                        <li><a href="blog-list.html">Blog List</a></li>
-                                        <li><a href="single-news.html">Single Blog</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li><a href="404.html">404</a></li>
+
+                                        <li>
+                                            <a href="@Url.Action("Index", "Products")">Success Stories</a>
+
+                                        </li>
+                                        <li><a href="@Url.Action("Index", "Contact_Us")">Contact</a></li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Worker_Login")">Feedback and Rating</a>
+
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Worker_Login")">Terms and Conditions</a>
+
+                                        </li>
+
                                     </ul>
                                 </li>
-                                <li class="drop-menu">
-                                    <a href="team.html">Team <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    <ul>
-                                        <li><a href="team.html">team 1</a></li>
-                                        <li><a href="single-member.html">single member</a></li>
-                                    </ul>
+
+                                <li>
+                                    <a href="@Url.Action("Index", "Worker_Login")">Login</a>
+
                                 </li>
-                                <li class="drop-menu">
-                                    <a href="#blog">Blog  <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    <ul>
-                                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                                        <li><a href="blog-list.html">Blog List</a></li>
-                                        <li><a href="single-news.html">Single Blog</a></li>
-                                        <li><a href="404.html">Error Page</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
+
+
                             </ul>
                         </nav>
                     </div>
