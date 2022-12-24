@@ -1,4 +1,9 @@
-﻿<!doctype html>
+﻿@using E_WORKERS.Models;
+
+
+
+
+<!doctype html>
 <html class="no-js" lang="zxx">
 
 
@@ -53,7 +58,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                         <div class="logo-area">
-                            <a href="@Url.Action("Indexcustomer","")"><img src="~/content/customer/images/logo.png" alt="E-WORKERS"></a>
+                            <a href="@Url.Action("Indexcustomer", "")"><img src="~/content/customer/images/logo.png" alt="E-WORKERS"></a>
                         </div>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
@@ -61,11 +66,11 @@
                             <nav>
                                 <ul id="nav">
                                     <li>
-                                        <a href="@Url.Action("Indexcustomer","")">Home</a>
+                                        <a href="@Url.Action("Indexcustomer", "")">Home</a>
 
                                     </li>
                                     <li>
-                                        <a href="@Url.Action("About","")">About</a>
+                                        <a href="@Url.Action("About", "")">About</a>
                                     </li>
 
                                     <li>
@@ -98,9 +103,35 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li>
+                                   
+                                    <li class="drop-menu">
                                         <a href="@Url.Action("Products", "")">Products</a>
+                                        <ul>
+                                            <li> <a href="@Url.Action("Products", "")">Products</a></li>
+                                            <li><a href="@Url.Action("DisplayCart", "Cart")">Cart</a></li>
 
+                                            <li>
+                                                <a href="@Url.Action("Checkout", "Cart")">Checkout</a>
+
+                                            </li>
+                                            @if (currentuser.currentcustomer == null)
+                                            {
+                                                <li>
+                                                    <a href="@Url.Action("AccountLogin", "")">Account</a>
+
+                                                </li>
+                                            }
+                                            else
+                                            {
+
+                                        <li>
+                                            <a href="#">@currentuser.currentcustomer.Customer_Name</a>
+
+                                        </li>
+
+                                            }
+
+</ul>
                                     </li>
                                     <li class="drop-menu">
                                         <a href="#blog">More </a>
