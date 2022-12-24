@@ -103,7 +103,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                   
+
                                     <li class="drop-menu">
                                         <a href="@Url.Action("Products", "")">Products</a>
                                         <ul>
@@ -114,24 +114,14 @@
                                                 <a href="@Url.Action("Checkout", "Cart")">Checkout</a>
 
                                             </li>
-                                            @if (currentuser.currentcustomer == null)
-                                            {
-                                                <li>
-                                                    <a href="@Url.Action("AccountLogin", "")">Account</a>
 
-                                                </li>
-                                            }
-                                            else
-                                            {
+                                            <li>
+                                                <a href="@Url.Action("AccountLogin", "")">Account</a>
 
-                                        <li>
-                                            <a href="#">@currentuser.currentcustomer.Customer_Name</a>
+                                            </li>
 
-                                        </li>
 
-                                            }
-
-</ul>
+                                        </ul>
                                     </li>
                                     <li class="drop-menu">
                                         <a href="#blog">More </a>
@@ -153,12 +143,23 @@
 
                                         </ul>
                                     </li>
+                                    @if (currentuser.currentcustomer == null)
+                                    {
+                                        <li>
+                                            <a href="@Url.Action("AccountLogin", "")">Login</a>
 
-                                    <li>
-                                        <a href="@Url.Action("Index", "Worker_Login")">Login</a>
+                                        </li>
+                                    }
 
-                                    </li>
+                                    else
+                                    {
 
+                                        <li>
+                                            <a href="#">@currentuser.currentcustomer.Customer_Name</a>
+
+                                        </li>
+
+                                    }
 
                                 </ul>
                             </nav>
