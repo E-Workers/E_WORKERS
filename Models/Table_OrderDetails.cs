@@ -14,13 +14,16 @@ namespace E_WORKERS.Models
         public int Products_FID { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string Pro_Order_Quantity { get; set; }
+       
+        public int Product_Quantity { get; set; }
 
         public int Order_FID { get; set; }
 
         [Column(TypeName = "numeric")]
-        public decimal Sale_Price { get; set; }
+        public decimal Products_Saleprice { get; set; }
+
+          [Column(TypeName = "numeric")]
+        public decimal Products_Purchaseprice { get; set; }
 
         public virtual Table_Order Table_Order { get; set; }
     }

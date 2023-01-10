@@ -76,7 +76,10 @@ namespace E_WORKERS.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Table_OrderDetails>()
-                .Property(e => e.Sale_Price)
+                .Property(e => e.Products_Saleprice)
+                .HasPrecision(18, 0);
+            modelBuilder.Entity<Table_OrderDetails>()
+                .Property(e => e.Products_Purchaseprice)
                 .HasPrecision(18, 0);
 
             modelBuilder.Entity<Table_Products>()

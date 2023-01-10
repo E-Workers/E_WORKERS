@@ -21,7 +21,23 @@ namespace E_WORKERS.Models
 
         [Required]
         [StringLength(50)]
+        public string Customer_name { get; set; } 
+
+        [StringLength(50)]
+        public string Customer_address { get; set; } 
+
+        [StringLength(50)]
+        public string Customer_email { get; set; } 
+
+        [StringLength(50)]
+        public string Customer_phone { get; set; } 
+
+        [StringLength(50)]
         public string Order_Status { get; set; }
+        
+        [Required]
+        [StringLength(50)]
+        public string Order_Type { get; set; }
 
         [Required]
         [StringLength(50)]

@@ -15,14 +15,14 @@ namespace E_WORKERS.Controllers
         {
             return View();
         }
-        public ActionResult AccountLogin()
+        public ActionResult CustomerLogin()
         {
             ViewBag.City_FID = new SelectList(db.Table_City, "City_ID", "City_Name");         
             return View();
         }
 
         [HttpPost]
-        public ActionResult AccountLogin(Table_Customer customer)
+        public ActionResult CustomerLogin(Table_Customer customer)
         {
 
             if (customer.Customer_Name == null || customer.Customer_Address == null || customer.Customer_Phone == null)
@@ -33,7 +33,15 @@ namespace E_WORKERS.Controllers
                 if (result != null)
                 {
                     currentuser.currentcustomer = result;
-                    return RedirectToAction("Products");
+                    if (Session["cart"] == null)
+                    {
+                        return RedirectToAction("Products");
+                    }
+                    else
+                    {
+                        return RedirectToAction("DisplayCart","Cart");
+                    }
+                    
                 }
                 else
                 {

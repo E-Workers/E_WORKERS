@@ -380,7 +380,8 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Views\Cart\DisplayCart.cshtml" />
     <Content Include="Views\Cart\Checkout.cshtml" />
-    <Content Include="Views\Home\AccountLogin.cshtml" />
+    <Content Include="Views\Home\CustomerLogin.cshtml" />
+    <Content Include="Views\Cart\Orderbook.cshtml" />
     <None Include="Views\Home\Workers.cshtml" />
     <None Include="Views\Home\Products.cshtml" />
     <Content Include="Web.config" />
